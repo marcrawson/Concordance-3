@@ -278,7 +278,6 @@ void printOutput(node_k *upper_keyword_in_lines_and_key, node_c *line_chars) {
 		line += num;
 	}
 	strcat(buffer, line);
-	// printf("%s\n", buffer);
 	
 	// if length before keyword is > 20: then find first space after 8th column
 	if (index > 19) {
@@ -307,12 +306,8 @@ void printOutput(node_k *upper_keyword_in_lines_and_key, node_c *line_chars) {
 			}
 		}
 		buffer[last_space] = '\0';
-		// for (int g = strlen(line); g >= last_space; g--) {
-		// 	buffer[g] = '\0';
-		// }
 	}
 	printf("%s\n", buffer);
-	// printf("%s\n", output);
 }
 
 void makeListLineChars(node_k *upper_keyword_in_lines_and_key, node_c *line_chars) {
