@@ -189,8 +189,6 @@ node_k *add_inorder_k_2(node_k *head, node_k *new) {
 }
 
 node_c *new_node_c(char character) {
-    // assert(character != NULL); // causes warning
-
     node_c *temp = (node_c *)emalloc(sizeof(node_c));
 
     temp->ch = character;
@@ -212,61 +210,3 @@ node_c *add_end_c(node_c *head, node_c *new) {
     new->next = NULL;
     return head;
 }
-
-// node_l *new_node_l(char *keyword, char *line, node_c *char_l) {
-//     node_l *temp = (node_l *)emalloc(sizeof(node_l));
-
-//     strncpy(temp->keyword, keyword, LIST_MAXLEN_TEXT);
-//     strncpy(temp->line, line, LIST_MAXLEN_TEXT);
-//     temp->ch_line = *char_l;
-//     temp->next = NULL;
-
-//     return temp;
-// }
-
-// node_l *add_end_l(node_l *head, node_l *new) {
-//     node_l *curr;
-
-//     if (head == NULL) {
-//         new->next = NULL;
-//         return new;
-//     }
-
-//     for (curr = head; curr->next != NULL; curr = curr->next);
-//     curr->next = new;
-//     new->next = NULL;
-//     return head;
-// }
-
-// node_l *add_inorder_l(node_l *head, node_l *new) {
-//     node_l *prev = NULL;
-//     node_l *curr = NULL;
-
-//     if (head == NULL) {
-//         return new;
-//     }
-
-//     for (curr = head; curr != NULL; curr = curr->next) {
-//         if (strcmp(new->line, curr->line) > 0) {
-//             prev = curr;
-//         } else {
-//             break;
-//         }
-//     }
-
-//     new->next = curr;
-
-//     if (prev == NULL) {
-//         return new;
-//     } else {
-//         prev->next = new;
-//         return head;
-//     }
-// }
-
-// typedef struct node_l {
-//     char keyword[LIST_MAXLEN_TEXT];
-//     char line[LIST_MAXLEN_TEXT];
-//     node_c ch_line;
-//     struct node_l *next;
-// } node_l;
