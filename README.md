@@ -1,5 +1,5 @@
 # Concordance-3
-Text concordance algorithm in C that generates formatted and lexicographically sorted output. 
+Text concordance algorithm in C that generates a formatted and lexicographically sorted output. 
 
 Algorithm takes input through stdin specifying exclusion words (i.e. words not to be indexed by algorithm) and body text to be processed and sorted via concordance specifications. The result is output through stdout.
 
