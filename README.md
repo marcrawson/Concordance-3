@@ -1,10 +1,20 @@
-# Concordance-3
-Text concordance algorithm in C that generates a formatted and lexicographically sorted output. 
+# Concordance 3
 
-Algorithm takes input through stdin specifying exclusion words (i.e. words not to be indexed by algorithm) and body text to be processed and sorted via concordance specifications. The result is output through stdout.
+### Overview
+Concordance algorithm in C generates a formatted and sorted text output.
 
-Concordance (aka keyword in context) algorithms determine context on either side of a given word. The Concordance-3 evaluates all words found in body text that are not found in exclusion words. These words are know as query words. For example, say the query word is "apple", and the sentence is "an apple fell beside me", the raw output prior to formatting would be "an APPLE fell beside me". Concordance-3 improves upon this idea by further formatting the output. All query words are lexicographically sorted and collumn aligned in order to provide a readable and consistent output.
+### Algorithm Steps:
+- Takes input through *stdin*;
+- Identifies and stores **exclusion words** and **body text**;
+- Calculates keywords by **matching** non-exclusion words with body text;
+- Locates keyword occurances;
+- Formats output by **aligning keywords** and **removing excess context**;
+- Result is output through *stdout*.
 
-The idea of concordance proves to be incredibly useful in data analysis applications as it not only identifies how many times a given word is used, but also the context in which the word is used. This can provide great insight into large data sets which are often hidden when such technique is not used.
 
-My Concordance-3 program uses efficient software engineering practices such as low coupling and high cohesion by decomposing larger functions into smaller helper functions with specific documentation. This will lead to maintainable code and easy debugging in the future. The algorithm also utilizes dynamic allocation in C through a custom and safer memory allocation function know as "emalloc". Data is primarilly stored through the linked-list data strucutre that provides efficient and readible data processing.
+### Text Concordance
+Concordance algorithms, also known as keyword in context algorithms, analyze the context of a given word by examining the words on either side of it. The Concordance-3 algorithm focuses on all the words in the body text that are not part of the exclusion words list, which are called query words. For example, if the query word is "apple," and the sentence is "An apple fell beside me," the raw output before formatting would be "An APPLE fell beside me."
+
+However, Concordance-3 takes the concept further by enhancing the output's readability and consistency. Specifically, it sorts all query words lexicographically and aligns them in columns. The Concordance-3 program is a valuable tool for data analysis applications because it not only identifies the frequency of a given word but also the context in which the word is used. This technique can provide significant insight into large datasets, which would otherwise be hidden.
+
+To ensure the Concordance-3 program's maintainability and ease of debugging, it employs efficient software engineering practices, such as low coupling and high cohesion. The program decomposes larger functions into smaller helper functions, each with specific documentation. The algorithm also uses dynamic allocation in C through a custom memory allocation function called "emalloc." Data is primarily stored using the linked-list data structure, which provides efficient and readable data processing.
